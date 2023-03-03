@@ -52,3 +52,10 @@
     gap: 30px;
   }
 }
+
+@media (max-width: 1023px) {
+  .wrapper {
+    flex-grow: 1;
+    padding-top: 64px;
+  }
+}

@@ -7,7 +7,7 @@ import {useEffect} from "react";
 import {productRequestAsync} from "../../store/product/productSlice";
 
 export const Catalog = () => {
-    const {products} = useSelector(state => state.product);
+    const {products, flag} = useSelector(state => state.product);
     const dispatch = useDispatch();
     const {category, activeCategory} = useSelector(state => state.category);
 
@@ -32,6 +32,7 @@ export const Catalog = () => {
                                 </li>
                             ))}
                         </ul> :
+                        flag  &&
                         <div className={style.empty}>К сожалению товаров данной категории нет.</div>
                     }
                 </div>
